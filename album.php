@@ -2,7 +2,7 @@
 session_start();
 //error_reporting(0);
 ob_start();  
-//ini_set('max_execution_time', 300);
+ini_set('max_execution_time', 300);
 include 'album_nextpage_function.php';
 
 include 'album_zip_create_function.php';
@@ -314,9 +314,9 @@ if(isset($_GET['download']))
 		}
          folder_zip($main_folder);
          delete_folder($main_folder);
-        // zip_download_pc($main_folder,$zip_name);
+         zip_download_pc($main_folder,$zip_name);
         // call javascript function and show download link
-         echo "<script type='text/javascript'>downloadlink('$main_folder');</script>";
+         //echo "<script type='text/javascript'>downloadlink('$main_folder');</script>";
 		}
 		else
 		{
