@@ -8,7 +8,7 @@ $client = new Google_Client();
 $client->setAuthConfigFile('api.json');
 $client->setRedirectUri("https://rajmistry.herokuapp.com/upload_drive.php");
 $client->addScope(Google_Service_Drive::DRIVE);
-/*
+
 if (! isset($_GET['code'])) 
 {
     $auth_url = $client->createAuthUrl();
@@ -76,7 +76,7 @@ function moveToDrive($album_id,$folderId,$drive)
     
     
 }
-*/
+
 
 ?>
 
