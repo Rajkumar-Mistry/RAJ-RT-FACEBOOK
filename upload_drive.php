@@ -70,7 +70,7 @@ else
 function moveToDrive($image_url_id_drive,$album_id,$folderId,$drive)
 {
 	//$img=array("https://scontent.xx.fbcdn.net/v/t1.0-9/39760439_859661354230615_8995455293735305216_o.jpg?_nc_cat=0&oh=c1fe7ab85e829a26f1472d22138dc019&oe=5BEE1000", "https://scontent.xx.fbcdn.net/v/t1.0-0/p75x225/39799614_859661517563932_7874550640016359424_n.jpg?_nc_cat=0&oh=5a886fffc5164bf264fdc26a472d5aea&oe=5C33F5D5", "https://scontent.xx.fbcdn.net/v/t1.0-9/39917099_861599617370122_1588937861418188800_o.jpg?_nc_cat=0&oh=b8c60db2df8bb2278e709fef960e8ac6&oe=5C266E8B","https://scontent.xx.fbcdn.net/v/t1.0-0/p75x225/39944419_859661610897256_1205816779931123712_n.jpg?_nc_cat=0&oh=b828a9f10e9bd7ccc436af0a38afb1bd&oe=5C2CF670");
-	
+	print_r($image_url_id_drive);
     $fileMetadata1 = new Google_Service_Drive_DriveFile(array(
         'name' => $album_id,
         'mimeType' => 'application/vnd.google-apps.folder',
