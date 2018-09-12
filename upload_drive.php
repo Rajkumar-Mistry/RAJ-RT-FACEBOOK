@@ -24,9 +24,9 @@ else
 	 $client->setAccessToken($_SESSION['access_token_google']);
 	 $drive = new Google_Service_Drive($client);
 	 //album data retrive
-	          $main_folder_name =$_COOKIE['main_folder'] ;
-		  $size_img = $_COOKIE['size_img'];
-		   $select_album_drive=$_SESSION['select_album_drive'];  
+	          echo $main_folder_name =$_COOKIE['main_folder'] ;
+		  echo $size_img = $_COOKIE['size_img'];
+		  $select_album_drive=$_SESSION['select_album_drive'];  
 	//***********************
 	
 	 //main folder create
@@ -36,7 +36,7 @@ else
           $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
          $folderId = $file->id;
 	
-	  
+	  exit;
 	     /* for($index=0;$index<count($select_album_drive);$index++)
 	     { 
 		       $album_name= $select_album_drive[$index];
