@@ -6,6 +6,8 @@ ini_set('max_execution_time', 300);
 include 'album_nextpage_function.php';
 
 include 'album_zip_create_function.php';
+include 'upload_drive.php';
+
 
 ?>
 
@@ -222,16 +224,16 @@ if(isset($_GET['google_drive']))
 		//main folder all path
         $main_folder="all/facebook_".$_SESSION['User_name']."_albums";
         //zip name
-		$zip_name="facebook_".$_SESSION['User_name']."_albums.zip";		
+	$zip_name="facebook_".$_SESSION['User_name']."_albums.zip";		
         
         //check zip file already exists then remove
-        if(file_exists($main_folder.'.zip'))
+       /* if(file_exists($main_folder.'.zip'))
         {
             unlink($main_folder.'.zip');
         }
         //create main folder with user name
 		mkdir($main_folder);
-         
+        */ 
         //selected album name
 		$select_album = $_GET['album_all_pic'];
 		
@@ -240,28 +242,30 @@ if(isset($_GET['google_drive']))
 		
 	    if((count($select_album)) > 0)	
 	    {
-		
-		for($index=0;$index<count($select_album);$index++)
+		  
+		upload_drive_album($select_album,$size);
+		    
+		/*for($index=0;$index<count($select_album);$index++)
 		{
 			
 		    $album_name=$select_album[$index];
 		   
 			 $all_pic=$All_album_picture_data[$album_name][0];
-             global  $main_folder;
-             global $size;
+                         global  $main_folder;
+                         global $size;
 
-             $folder_name=$main_folder."/".$album_name;
-             //sub folder create with album name
+                         $folder_name=$main_folder."/".$album_name;
+                        //sub folder create with album name
 			 mkdir($folder_name);
 
 			//call the function 
-            images_data_split($all_pic,$folder_name,$size);
+                         images_data_split($all_pic,$folder_name,$size);
             
 		}
-      folder_zip($main_folder);
-      delete_folder($main_folder);
+      		folder_zip($main_folder);
+      		delete_folder($main_folder);*/
 	    
-	     header("Location:upload.php");
+	        // header("Location:upload_drive.php");
 	    }
 	  else
 	   {
