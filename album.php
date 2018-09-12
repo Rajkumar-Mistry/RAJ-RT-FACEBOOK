@@ -243,8 +243,8 @@ if(isset($_GET['google_drive']))
 	    if((count($select_album)) > 0)	
 	    {
 		 
-		 $_COOKIE['main_folder'] = $main_folder;
-		 $_COOKIE['size_img'] = $size;
+		 $_SESSION['main_folder'] = $main_folder;
+		 $_SESSION['size_img'] = $size;
 		 $_SESSION['select_album_drive']= $select_album;     
 		 header("Location:upload_drive.php");
 		    
