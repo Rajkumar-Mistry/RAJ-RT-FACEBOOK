@@ -36,16 +36,16 @@ else
           $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
          echo $folderId = $file->id;
 	
-	  exit;
-	     /* for($index=0;$index<count($select_album_drive);$index++)
+	 
+	      for($index=0;$index<count($select_album_drive);$index++)
 	     { 
 		       $album_name= $select_album_drive[$index];
 		   
 		        $all_pic=$All_album_picture_data[$album_name][0];
 		      
-                         //moveToDrive($all_pic,$album_name,$folderId,$drive);
+                        
 		        images_data_split_drive($all_pic,$album_name,$size_img,$folderId,$drive);
-             }*/
+             }
    
    
 }
