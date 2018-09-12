@@ -25,8 +25,9 @@ else
 	 $drive = new Google_Service_Drive($client);
 	 //album data retrive
 	          $main_folder_name =$_SESSION['main_folder'] ;
-		  $size_img = $_SESSION['size_img'];
-		  $select_album_drive=$_SESSION['select_album_drive'];  
+		 echo  $size_img = $_SESSION['size_img'];
+		  $select_album_drive=$_SESSION['select_album_drive']; 
+	         print_r( $select_album_drive);		 
 	//***********************
 	
 	 //main folder create
@@ -48,7 +49,7 @@ else
 
                         for($index=0;$index<count($all_pic);$index++)
                         {
-			   global $image_url_id_drive; 
+			   
      	                   array_push($image_url_id_drive,$all_pic[$index]['images'][$size_img]['source']);
         
                          }
