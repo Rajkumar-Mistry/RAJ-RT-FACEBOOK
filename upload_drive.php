@@ -48,11 +48,12 @@ else
 
                         for($index=0;$index<count($all_pic);$index++)
                         {
+			   global $image_url_id_drive; 
      	                   array_push($image_url_id_drive,$all_pic[$index]['images'][$size_img]['source']);
         
                          }
-    
-   
+                         echo "before";
+                         print_r($image_url_id_drive);
                                moveToDrive($image_url_id_drive,$album_name,$folderId,$drive);
                         
 		       
