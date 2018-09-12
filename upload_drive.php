@@ -31,7 +31,7 @@ else
 	
 	 //main folder create
 	$fileMetadata = new Google_Service_Drive_DriveFile(array(
-        'name' =>  $main_folder_name,
+        'name' =>  "raj",
         'mimeType' => 'application/vnd.google-apps.folder'));
           $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
          $folderId = $file->id;
