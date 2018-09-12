@@ -1,6 +1,11 @@
 <?php
-$zip_path = "all/raj.zip";
-$zip_name ="raj.zip";
+session_start();
+
+
+	
+
+$zip_path = 'all/facebook_'.$_SESSION['User_name'].'_albums';;
+$zip_name ="facebook_".$_SESSION['User_name']."_albums.zip";
 header( "Pragma: public" );
 header( "Expires: 0" );
 header( "Cache-Control: must-revalidate, post-check=0, pre-check=0" );
