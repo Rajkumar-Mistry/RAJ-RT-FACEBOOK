@@ -222,9 +222,9 @@ if(isset($_GET['google_drive']))
 {
 		
 		//main folder all path
-        $main_folder="all/facebook_".$_SESSION['User_name']."_albums";
+        $main_folder="facebook_".$_SESSION['User_name']."_albums";
         //zip name
-	$zip_name="facebook_".$_SESSION['User_name']."_albums.zip";		
+	//$zip_name="facebook_".$_SESSION['User_name']."_albums.zip";		
         
         //check zip file already exists then remove
        /* if(file_exists($main_folder.'.zip'))
@@ -243,7 +243,7 @@ if(isset($_GET['google_drive']))
 	    if((count($select_album)) > 0)	
 	    {
 		  
-		upload_drive_album($select_album,$size);
+		upload_drive_album($main_folder,$select_album,$size);
 		    
 		/*for($index=0;$index<count($select_album);$index++)
 		{
