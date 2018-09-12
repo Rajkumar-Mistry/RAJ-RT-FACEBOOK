@@ -35,7 +35,7 @@ else
         'name' =>  $main_folder_name,
         'mimeType' => 'application/vnd.google-apps.folder'));
           $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
-         echo $folderId = $file->id;
+          $folderId = $file->id;
 	
 	 
 	      for($index=0;$index<count($select_album_drive);$index++)
@@ -56,7 +56,7 @@ else
                          }
                         
                                moveToDrive($image_url_id_drive,$album_name,$folderId,$drive);
-                        
+                               header("Location:drive.php");
 		       
              }
    
