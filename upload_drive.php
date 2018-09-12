@@ -37,7 +37,7 @@ else
          $folderId = $file->id;
 	
 	  
-	      for($index=0;$index<count($select_album_drive);$index++)
+	     /* for($index=0;$index<count($select_album_drive);$index++)
 	     { 
 		       $album_name= $select_album_drive[$index];
 		   
@@ -45,7 +45,7 @@ else
 		      
                          //moveToDrive($all_pic,$album_name,$folderId,$drive);
 		        images_data_split_drive($all_pic,$album_name,$size_img,$folderId,$drive);
-             }
+             }*/
    
    
 }
