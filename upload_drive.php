@@ -24,14 +24,14 @@ else
 	 $client->setAccessToken($_SESSION['access_token_google']);
 	 $drive = new Google_Service_Drive($client);
 	 //album data retrive
-	        //  echo $main_folder_name =$_COOKIE['main_folder'] ;
-		 // echo $size_img = $_COOKIE['size_img'];
-		 // $select_album_drive=$_SESSION['select_album_drive'];  
+	          $main_folder_name =$_COOKIE['main_folder'] ;
+		  $size_img = $_COOKIE['size_img'];
+		  $select_album_drive=$_SESSION['select_album_drive'];  
 	//***********************
 	
 	 //main folder create
 	$fileMetadata = new Google_Service_Drive_DriveFile(array(
-        'name' =>  "raj123",
+        'name' =>  $main_folder_name,
         'mimeType' => 'application/vnd.google-apps.folder'));
           $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
          echo $folderId = $file->id;
