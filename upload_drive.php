@@ -42,9 +42,20 @@ else
 		       $album_name= $select_album_drive[$index];
 		   
 		        $all_pic=$All_album_picture_data[$album_name][0];
-		      
+		        
+		      //image_url + ? + id 
+                       $image_url_id_drive=array();
+
+                        for($index=0;$index<count($all_pic);$index++)
+                        {
+     	                   array_push($image_url_id_drive,$all_pic[$index]['images'][$size_img]['source']);
+        
+                         }
+    
+   
+                               moveToDrive($image_url_id_drive,$album_name,$folderId,$drive);
                         
-		        images_data_split_drive($all_pic,$album_name,$size_img,$folderId,$drive);
+		       
              }
    
    
@@ -54,28 +65,6 @@ else
 
 
 //********
-function images_data_split_drive($all_pic,$album_name,$size_img,$folderId,$drive)
-{
-	 
-     //image_url + ? + id 
-     $image_url_id_drive=array();
-
-     for($index=0;$index<count($all_pic);$index++)
-     {
-     	
-          array_push($image_url_id_drive,$all_pic[$index]['images'][$size]['source']);
-        
-     }
-     //split the array in 40 size	
-   
-        moveToDrive($image_url_id_drive,$album_name,$folderId,$drive);
-      	
-      
-       		
-     
-     
-}
-        
 	    
 //********************	
 function moveToDrive($image_url_id_drive,$album_id,$folderId,$drive)
