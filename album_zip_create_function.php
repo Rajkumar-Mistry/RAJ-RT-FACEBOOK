@@ -92,7 +92,7 @@ zip_download_pc($main_folder,$zipname);
 function zip_download_pc($main_folder,$zipname)
 {
 $zip_path = $main_folder;
-$zip_name = $zipname;
+
 header( "Pragma: public" );
 header( "Expires: 0" );
 header( "Cache-Control: must-revalidate, post-check=0, pre-check=0" );
