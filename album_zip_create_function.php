@@ -86,8 +86,7 @@ foreach ($files as $name => $file)
     }
 }
 $zip->close();
-$zipname="raju.zip";	
-zip_download_pc($main_folder,$zipname);
+
 }
 function zip_download_pc($main_folder,$zipname)
 {
