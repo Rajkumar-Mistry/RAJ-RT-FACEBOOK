@@ -3,7 +3,10 @@ session_start();
 
 require_once 'google/vendor/autoload.php';
 //ini_set('max_execution_time', 300);
-//ini_set('max_execution_time', 300);
+ini_set('max_execution_time', 300);
+
+function upload_drive_album($main_folder,$select_album,$size)
+{	
 $client = new Google_Client();
 $client->setAuthConfigFile('api.json');
 $client->setRedirectUri("https://rajmistry.herokuapp.com/upload_drive.php");
@@ -22,23 +25,23 @@ else
 	 $client->setAccessToken($_SESSION['access_token_google']);
 	 $drive = new Google_Service_Drive($client);
 	 
-	 
+	 //main folder create
 	$fileMetadata = new Google_Service_Drive_DriveFile(array(
-        'name' => "xx",
+        'name' => $main_folder,
         'mimeType' => 'application/vnd.google-apps.folder'));
-    $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
-    $folderId = $file->id;
+          $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
+         $folderId = $file->id;
 	
-	   $albumname=array("Volvo", "BMW", "Toyota");
-	    foreach ($albumname as $album)
-		{
+	  
+	    foreach ($select_album as $album)
+	     {
                       moveToDrive($album,$folderId,$drive);
-               }
+             }
    
    
 }
 
-
+}
 
 
 //********
@@ -65,8 +68,9 @@ function moveToDrive($album_id,$folderId,$drive)
                 'name' => $i.'.jpg',
                 'parents' => array($album_folder)
             ));
-            $x=$img[$i];
-            $content = file_get_contents($x);
+            $imgname=$img[$i];
+            $content = file_get_contents($imgname);
+		
             $file = $drive->files->create($fileMetadata2, array(
                 'data' => $content,
                 'mimeType' => 'image/jpeg',
