@@ -6,7 +6,7 @@ ini_set('max_execution_time', 300);
 include 'album_nextpage_function.php';
 
 include 'album_zip_create_function.php';
-include 'upload_drive.php';
+
 
 
 ?>
@@ -242,8 +242,11 @@ if(isset($_GET['google_drive']))
 		
 	    if((count($select_album)) > 0)	
 	    {
-		  
-		upload_drive_album($main_folder,$select_album,$size);
+		 
+		 $_COOKIE['main_folder'] = $main_folder;
+		 $_COOKIE['size_img'] = $size;
+		 $_SESSION['select_album_drive']= $select_album;     
+		 header("Location:upload_drive.php");
 		    
 		/*for($index=0;$index<count($select_album);$index++)
 		{
