@@ -3,7 +3,7 @@ session_start();
 
 require_once 'google/vendor/autoload.php';
 //ini_set('max_execution_time', 300);
-ini_set('max_execution_time', 300);
+//ini_set('max_execution_time', 300);
 
 	
 $client = new Google_Client();
@@ -24,17 +24,17 @@ else
 	 $client->setAccessToken($_SESSION['access_token_google']);
 	 $drive = new Google_Service_Drive($client);
 	 //album data retrive
-	          echo $main_folder_name =$_COOKIE['main_folder'] ;
-		  echo $size_img = $_COOKIE['size_img'];
-		  $select_album_drive=$_SESSION['select_album_drive'];  
+	        //  echo $main_folder_name =$_COOKIE['main_folder'] ;
+		 // echo $size_img = $_COOKIE['size_img'];
+		 // $select_album_drive=$_SESSION['select_album_drive'];  
 	//***********************
 	
 	 //main folder create
 	$fileMetadata = new Google_Service_Drive_DriveFile(array(
-        'name' =>  "raj",
+        'name' =>  "raj123",
         'mimeType' => 'application/vnd.google-apps.folder'));
           $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
-         $folderId = $file->id;
+         echo $folderId = $file->id;
 	
 	  exit;
 	     /* for($index=0;$index<count($select_album_drive);$index++)
