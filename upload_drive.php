@@ -24,8 +24,8 @@ else
 	 $client->setAccessToken($_SESSION['access_token_google']);
 	 $drive = new Google_Service_Drive($client);
 	 //album data retrive
-	          $main_folder_name =$_COOKIE['main_folder'] ;
-		  $size_img = $_COOKIE['size_img'];
+	          $main_folder_name =$_SESSION['main_folder'] ;
+		  $size_img = $_SESSION['size_img'];
 		  $select_album_drive=$_SESSION['select_album_drive'];  
 	//***********************
 	
