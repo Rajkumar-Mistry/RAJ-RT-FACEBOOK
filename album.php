@@ -48,7 +48,7 @@ include 'album_zip_create_function.php';
   </div>
 
 </div>
-
+<button  onclick=start();>Open Modal</button>
 <!-- The Modal -->
 	
 <!-- hearder -->
