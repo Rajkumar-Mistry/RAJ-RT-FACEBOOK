@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ob_start();
 
 	
 $zip_path = 'all/facebook_'.$_SESSION['User_name'].'_albums';
@@ -19,7 +19,7 @@ header( "Content-Transfer-Encoding: binary" );
 header( "Content-Length: " . filesize( $zip_path ) );
 readfile( $zip_path );
 }
-elase
+else
 {
 	echo "not a file ";
 }
