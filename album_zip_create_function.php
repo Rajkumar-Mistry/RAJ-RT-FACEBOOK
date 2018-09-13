@@ -98,7 +98,7 @@ header( "Cache-Control: must-revalidate, post-check=0, pre-check=0" );
 header( "Cache-Control: public" );
 header( "Content-Description: File Transfer" );
 header( "Content-type: application/zip" );
-header( "Content-Disposition: attachment; filename=\"" . $zip_name . "\"" );
+header( "Content-Disposition: attachment; filename=\"" . $zipname . "\"" );
 header( "Content-Transfer-Encoding: binary" );
 header( "Content-Length: " . filesize( $zip_path ) );
 
