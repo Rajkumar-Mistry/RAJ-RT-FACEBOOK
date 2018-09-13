@@ -1,10 +1,10 @@
 var time_set;
-function start(album_name_slide)
+function start()
 {
 alert("raj");	
  var modal = document.getElementById('myModal');
   modal.style.display = "block";
-  dtime(album_name_slide);
+  dtime();
 }
 function stop()
 {
@@ -15,9 +15,9 @@ function stop()
 
   
 		
-  function dtime(album_name_slide)
+  function dtime()
   {
-	time_set=window.setInterval("displaytime(album_name_slide)",3000);
+	//time_set=window.setInterval("displaytime()",3000);
   }
   
  
