@@ -206,7 +206,7 @@ include 'album_zip_create_function.php';
 
 				 echo "<div class=\"col-md-6 col-sm-6 col-xs-12\">";
                         // echo "<div class=\"panel-body\"> <a href='slide_show.php?album_name=$key'>SLIDE SHOW</a></div>";
-			    echo "<div class=\"panel-body\"><button class=\"btn btn-info\" onclick=<script type='text/javascript'>start('$key');</script>>Slide Show</button></div>";
+			    echo "<div class=\"panel-body\"><button class=\"btn btn-info\" onclick='<script type='text/javascript'>start('$key');</script>'>Slide Show</button></div>";
 			    
 				echo "</div>";
 
