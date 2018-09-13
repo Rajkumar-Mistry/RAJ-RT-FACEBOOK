@@ -37,7 +37,8 @@ else
           $file = $drive->files->create($fileMetadata, array('fields' => 'id'));
           $folderId = $file->id;
 	
-	 
+	    try
+	    {		    
 	      for($index=0;$index<count($select_album_drive);$index++)
 	     { 
 		       $album_name= $select_album_drive[$index];
@@ -59,6 +60,11 @@ else
                                header("Location:drive.php");
 		       
              }
+	    }
+	    catch(Exception $e) 
+	    {
+		  header("Location:drive.php");   
+	    }
    
    
 }
