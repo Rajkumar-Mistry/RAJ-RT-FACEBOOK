@@ -1,6 +1,7 @@
 var time_set;
 function start(album_name_slide)
 {
+alert("raj");	
  var modal = document.getElementById('myModal');
   modal.style.display = "block";
   dtime(album_name_slide);
