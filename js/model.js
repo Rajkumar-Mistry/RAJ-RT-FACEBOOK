@@ -1,32 +1,68 @@
-function start()
+var time_set;
+function start(album_name_slide)
 {
  var modal = document.getElementById('myModal');
   modal.style.display = "block";
-  dtime();
+  dtime(album_name_slide);
 }
 function stop()
 {
    var modal = document.getElementById('myModal');
    modal.style.display = "none";
+   window.clearInterval(time_set);	
 }
 
-  t=21;
+  
 		
-  function dtime()
+  function dtime(album_name_slide)
   {
-	window.setInterval("displaytime()",3000);
+	time_set=window.setInterval("displaytime(album_name_slide)",3000);
   }
   
-  function displaytime()
+ 
+var position=0;
+  function displaytime(album_name_slide)
   {
-	if(t>23)
-	{
-		t=21;
-	}
-	document.getElementById("t1").src = t + ".jpg";
-	t=t+1;  
-  }
+   
+   <?php
+      $slider_image=array();
+    
+      $album_name ='album_name_slide';
+      $All_album_picture_data=array();
 
+   //seleted album data
+    $All_album_picture_data=$_SESSION['All_album_picture_data'];
+   
+  
+   $seleted_album=$All_album_picture_data[$album_name][0];
+      
+   
+       
+    
+   for ($index=0;$index<count($seleted_album);$index++)
+    {   
+         global $slider_image;
+        //image url add in array
+        $img_name=$seleted_album[$index]['images'][0]['source'];
+        array_push($slider_image,$img_name);
+    }  
+     
+      
+    ?>
+    //image url data array add in javascript variable
+    var image_url = <?php echo json_encode($slider_image); ?>;
+    
+    if(position==image_url.length)
+    {
+      position=0;
+    }
+    //set the source of image tag
+     document.getElementById("t1").src =image_url[position];
+  	  
+     position++;
+  
+  }
+  
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
