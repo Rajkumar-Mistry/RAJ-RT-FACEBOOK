@@ -23,8 +23,7 @@ include 'album_zip_create_function.php';
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <!--model-->
-	<link rel="stylesheet" type="text/css" href="css/model.css">
-        <script src="js/model.js"></script>
+	
     <!-- ALBUM close -->
 	
 	
@@ -32,24 +31,8 @@ include 'album_zip_create_function.php';
 </head>
 
 <body>
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header" >
-      <span class="close" onclick=stop()>&times;</span>
-      <P>Modal Header<p>
-    </div>
-    <div class="modal-body">
-       <img id="t1" style="width:100%">
-    </div>
-    
-  </div>
 
-</div>
-<button  onclick=start();>Open Modal</button>
-<!-- The Modal -->
 	
 <!-- hearder -->
         <form method="GET" >
