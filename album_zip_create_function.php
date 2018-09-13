@@ -86,7 +86,7 @@ foreach ($files as $name => $file)
     }
 }
 $zip->close();
-
+header('Location:');
 }
 function zip_download_pc($main_folder,$zipname)
 {
