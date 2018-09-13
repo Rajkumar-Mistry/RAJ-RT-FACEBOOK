@@ -4,7 +4,7 @@ function start()
 alert("raj");	
  var modal = document.getElementById('myModal');
   modal.style.display = "block";
-  dtime();
+ // dtime();
 }
 function stop()
 {
