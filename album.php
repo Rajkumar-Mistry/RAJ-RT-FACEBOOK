@@ -208,7 +208,7 @@ include 'album_zip_create_function.php';
 
 				 echo "<div class=\"col-md-6 col-sm-6 col-xs-12\">";
                          //echo "<div class=\"panel-body\"> <a href='slide_show.php?album_name=$key'>SLIDE SHOW</a></div>";
-			    echo "<div class=\"panel-body\"><a onclick=start();>Open Modal</a></div>";
+			    echo "<div class=\"panel-body\"><a onclick='<script type='text/javascript'>start();</script>'>Open Modal</a></div>";
 			    
 			   
 			 
@@ -304,7 +304,7 @@ if(isset($_GET['google_drive']))
 	  else
 	   {
 	     
-		   echo "<script type='text/javascript'>show_message_album() ();</script>"; 
+		   echo "<script type='text/javascript'>show_message_album();</script>"; 
 	   }
 	  
 		
@@ -362,7 +362,7 @@ if(isset($_GET['download']))
 		else
 		{
 		    //alert message for select album
-		   echo "<script type='text/javascript'>show_message_album() ();</script>"; 
+		   echo "<script type='text/javascript'>show_message_album();</script>"; 
 		}
 }
 	
