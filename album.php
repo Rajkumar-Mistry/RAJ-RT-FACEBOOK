@@ -209,8 +209,9 @@ include 'album_zip_create_function.php';
 			    
 			    echo "<div class=\"panel-body\">
 			    ?>
-			    <button  onclick=start()>Slide Show</button></div>";
+			    <button  onclick=start()>Slide Show</button>
 			    <?php
+			        echo "</div>";
 				echo "</div>";
 
                                  echo "</div>";
