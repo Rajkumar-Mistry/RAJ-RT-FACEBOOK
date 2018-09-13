@@ -6,7 +6,7 @@ ob_start();
 $zip_path = 'all/facebook_'.$_SESSION['User_name'].'_albums';
 if(file_exists($zip_path))
 {
-echo "download";	
+echo $zip_path;	
 $zip_name ="facebook_".$_SESSION['User_name']."_albums.zip";
 header( "Pragma: public" );
 header( "Expires: 0" );
