@@ -326,8 +326,7 @@ if(isset($_GET['download']))
         // call javascript function and show download link
 			
          echo "<script type='text/javascript'>downloadlink('$main_folder');</script>";
-	 sleep(10);		
-	 header('Location:download_zipfile.php');  		
+			
 		}
 		else
 		{
