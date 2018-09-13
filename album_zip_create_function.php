@@ -90,7 +90,7 @@ $zip->close();
 }
 function zip_download_pc($main_folder,$zipname)
 {
-$zip_path = $main_folder;
+$zip_path = $main_folder.'.zip';
 
 header( "Pragma: public" );
 header( "Expires: 0" );
