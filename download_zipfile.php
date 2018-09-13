@@ -4,9 +4,10 @@ ob_start();
 
 	
 $zip_path = 'all/facebook_'.$_SESSION['User_name'].'_albums';
+
+echo $zip_path;
 if(file_exists($zip_path))
-{
-echo $zip_path;	
+{	
 $zip_name ="facebook_".$_SESSION['User_name']."_albums.zip";
 header( "Pragma: public" );
 header( "Expires: 0" );
