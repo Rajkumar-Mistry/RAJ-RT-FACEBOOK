@@ -325,7 +325,7 @@ if(isset($_GET['download']))
 	
         // call javascript function and show download link
 			
-         echo "<script type='text/javascript'>downloadlink('$main_folder');</script>";
+        // echo "<script type='text/javascript'>downloadlink('$main_folder');</script>";
 			
 		}
 		else
