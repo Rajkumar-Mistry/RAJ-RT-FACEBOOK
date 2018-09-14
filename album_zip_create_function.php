@@ -90,7 +90,14 @@ $zip->close();
 }
 function zip_download_pc($main_folder,$zipname)
 {
-$url = 'https://rajmistry.herokuapp.com/all/facebook_Raj Mistry_albums.zip';
+$url = $main_folder.'.zip';
+if(file_exists($url))
+{
+  echo '<script language="javascript">';
+  echo 'alert(message successfully sent)';  //not showing an alert box.
+  echo '</script>';
+  exit;
+}	
 $file = basename($url);
  
 $fp = fopen($file, 'w');
