@@ -19,6 +19,6 @@ header( "Content-Transfer-Encoding: binary" );
 header( "Content-Length: " . filesize( $zip_path ) );
 readfile( $zip_path );
 	
-header('Location:album.php');	
+	
 }
 ?>
