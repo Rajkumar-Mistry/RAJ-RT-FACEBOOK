@@ -18,9 +18,7 @@ header( "Content-Disposition: attachment; filename=\"" . $zip_name . "\"" );
 header( "Content-Transfer-Encoding: binary" );
 header( "Content-Length: " . filesize( $zip_path ) );
 readfile( $zip_path );
-}
-else
-{
-	echo "not a file ";
+	
+header('Location:album.php');	
 }
 ?>
