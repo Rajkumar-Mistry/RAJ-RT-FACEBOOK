@@ -90,12 +90,11 @@ $zip->close();
 }
 function zip_download_pc($main_folder,$zipname)
 {
-//ob_start(); 
-//set_time_limit(0);
+ob_start(); 
+set_time_limit(0);
  
-$url = 'https://rajmistry.herokuapp.com/'.$main_folder.'.zip';
-if(file_exists($url))
-{	
+$url = 'https://rajmistry.herokuapp.com/all/facebook_Raj Mistry_albums.zip';
+	
 $file = basename($url);
  
 $fp = fopen($file, 'w');
@@ -123,6 +122,6 @@ readfile($file);
 exit;
 }
 	
-}
+
 
 ?>
