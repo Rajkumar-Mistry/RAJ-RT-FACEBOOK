@@ -93,7 +93,9 @@ function zip_download_pc($main_folder,$zipname)
 ob_start(); 
 set_time_limit(0);
  
-$url = 'https://rajmistry.herokuapp.com//all/'.$zipname;
+$url = 'https://rajmistry.herokuapp.com/all/'.$zipname;
+if(file_exists($url))
+{	
 $file = basename($url);
  
 $fp = fopen($file, 'w');
@@ -119,7 +121,8 @@ flush();
 readfile($file);
 //unlink('https://rajmistry.000webhostapp.com/56.zip');
 exit;
-
+}
+	
 }
 
 ?>
