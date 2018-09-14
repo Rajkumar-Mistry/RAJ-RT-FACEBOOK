@@ -352,11 +352,11 @@ if(isset($_GET['download']))
 		}
          folder_zip($main_folder);
          delete_folder($main_folder);
-         zip_download_pc($main_folder,$zip_name);
+       //  zip_download_pc($main_folder,$zip_name);
 	
         // call javascript function and show download link
 			
-        // echo "<script type='text/javascript'>downloadlink('$main_folder');</script>";
+         echo "<script type='text/javascript'>downloadlink('$main_folder');</script>";
 			
 		}
 		else
