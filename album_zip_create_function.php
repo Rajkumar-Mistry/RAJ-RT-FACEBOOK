@@ -90,10 +90,10 @@ $zip->close();
 }
 function zip_download_pc($main_folder,$zipname)
 {
-ob_start(); 
-set_time_limit(0);
+//ob_start(); 
+//set_time_limit(0);
  
-$url = 'https://rajmistry.herokuapp.com/all/'.$zipname;
+$url = 'https://rajmistry.herokuapp.com/'.$main_folder.'.zip';
 if(file_exists($url))
 {	
 $file = basename($url);
