@@ -3,7 +3,7 @@ session_start();
 ob_start();
 
 	
-$zip_path = 'all/facebook_'.$_SESSION['User_name'].'_albums';
+$zip_path = 'all/facebook_'.$_SESSION['User_name'].'_albums.zip';
 
 if(file_exists($zip_path))
 {	
